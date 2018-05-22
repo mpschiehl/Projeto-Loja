@@ -13,7 +13,8 @@ import javax.swing.JOptionPane;
  */
 public class Sistema {
    
-    
+   CadastroCliente registroCliente = new CadastroCliente();
+   
     public void apresentaMenu(){
         int menu =JOptionPane.showOptionDialog(null, "Clique na opção desejada", 
                 "Loja de Celular",0, JOptionPane.PLAIN_MESSAGE, null ,
@@ -27,8 +28,11 @@ public class Sistema {
                 case 1:
                     break;
                     default:
-                    apresentaMenu();
-            }
+                    JOptionPane.showMessageDialog(null,
+                            "Obrigado por Utilizar O Sistema", "loja de Celular"
+                            ,JOptionPane.PLAIN_MESSAGE);
+                        
+            }menu = 4;
         }
 
     }
@@ -37,19 +41,15 @@ public class Sistema {
                 "Loja de Celular",0, JOptionPane.PLAIN_MESSAGE, null ,
                 new Object[]{"Cadastro de Funcionários","Cadastro de Clientes",
                     "Sair"},"Sair");
-        while (menu2 != 3){
-            switch (menu){
-                case 0:
-                    apresentaMenuCadastro();
-                            break;
-                case 1:
-                    break;
-                case 2:
-                    break;
-                default:
-                    apresentaMenu();
-            }
+        if (menu2 == 0){
+            apresentaMenuCadastro();
+        }else if(menu2 == 1){
+            
+        }else if(menu2 ==2){
+            apresentaMenu();
+    }
+               
     }
     
 }
-}    
+   
