@@ -29,3 +29,5 @@ build.xml
 nbproject/project.properties
 /build/
 /nbproject/private/
+src/EntradaMercadorias.java
+src/CadastroCliente.java

@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author Marcio Pedro Schiehl and Ricardo Borba
  */
 public class Sistema {
-   
+   EntradaMercadorias registroMercadorias = new EntradaMercadorias();
    CadastroCliente registroCliente = new CadastroCliente();
    
     public void apresentaMenu(){
@@ -26,6 +26,7 @@ public class Sistema {
                     apresentaMenuCadastro();
                             break;
                 case 1:
+                    registroMercadorias.mercadoria();
                     break;
                     default:
                     JOptionPane.showMessageDialog(null,

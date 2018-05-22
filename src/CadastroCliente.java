@@ -41,7 +41,20 @@ public class CadastroCliente {
                 "Informe o Celular","Loja de Celular",JOptionPane.QUESTION_MESSAGE);
        ufs[posicao]= JOptionPane.showInputDialog(null,
                 "Informe a Unidade Federativa (Estado)","Loja de Celular",JOptionPane.QUESTION_MESSAGE);
-       cities
+       cities[posicao] = JOptionPane.showInputDialog(null,
+                "Informe a cidade","Loja de Celular",JOptionPane.QUESTION_MESSAGE);
+       neighborhoods[posicao] = JOptionPane.showInputDialog(null,
+                "Informe bairro","Loja de Celular",JOptionPane.QUESTION_MESSAGE);
+       places[posicao] = JOptionPane.showInputDialog(null,
+                "Informe o lougradouro","Loja de Celular",JOptionPane.QUESTION_MESSAGE);
+       numbers[posicao] = JOptionPane.showInputDialog(null,
+                "Informe o Numero","Loja de Celular",JOptionPane.QUESTION_MESSAGE);
+       addOns[posicao]= JOptionPane.showInputDialog(null,
+                "Complementos","Loja de Celular",JOptionPane.QUESTION_MESSAGE);
     }
+    public void cadastrar(){
+            solicitaInformacaoCliente(atual);
+            atual++;
+}
        
 }
