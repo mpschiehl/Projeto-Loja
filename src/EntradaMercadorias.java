@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
     String sistemaOp [] = new String [100];
     String acessorios [] = new  String [100];
     int atual =0;
+    
     public void mercadoria() {
         solicitarInformacao(atual);
         atual++;
