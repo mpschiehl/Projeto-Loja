@@ -86,7 +86,8 @@ public class CadastroCliente {
         
     }
     public void apresentarInformacao(int posicao){
-        
+        JOptionPane.showMessageDialog(null, " "
+                ,"Loja de Celular",JOptionPane.PLAIN_MESSAGE);
     }
        
 }
