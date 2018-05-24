@@ -12,45 +12,41 @@ import javax.swing.JOptionPane;
  * @author Marcio Pedro Schiehl and Ricardo Borba
  */
 public class Sistema {
-   EntradaMercadorias registroMercadorias = new EntradaMercadorias();
-   CadastroCliente registroCliente = new CadastroCliente();
+  
+   CadastroCliente tela2 = new CadastroCliente();
+   EntradaMercadorias tela3 = new EntradaMercadorias();
    
     public void apresentaMenu(){
         int menu =JOptionPane.showOptionDialog(null, "Clique na opção desejada", 
                 "Loja de Celular",0, JOptionPane.PLAIN_MESSAGE, null ,
-                new Object[]{"Cadastro","Entrada de Mercadorias","Vendas",
+                new Object[]{"Cadastro","Mercadorias","Vendas",
                     "Sair"},"Sair");
         while (menu != 4){
             switch (menu){
                 case 0:
-                    apresentaMenuCadastro();
+                    tela2.apresentaMenuCadastro();
                             break;
                 case 1:
-                    registroMercadorias.mercadoria();
+                    tela3.apresentaMenuCadastroMercadorias();
+                    break;
+                case 2:
+                    JOptionPane.showMessageDialog(null,
+                            "Em Construção", "loja de Celular"
+                            ,JOptionPane.PLAIN_MESSAGE);
                     break;
                     default:
-                    JOptionPane.showMessageDialog(null,
-                            "Obrigado por Utilizar O Sistema", "loja de Celular"
+                        JOptionPane.showMessageDialog(null,
+                            "Obrigado por utilizar o sistema.", "loja de Celular"
                             ,JOptionPane.PLAIN_MESSAGE);
-                        
-            }menu = 4;
+                    
+                    
+            }
+            menu =JOptionPane.showOptionDialog(null, "Clique na opção desejada", 
+                "Loja de Celular",0, JOptionPane.PLAIN_MESSAGE, null ,
+                new Object[]{"Cadastro","Mercadorias","Vendas",
+                    "Sair"},"Sair");
         }
 
     }
-    public void apresentaMenuCadastro(){
-        int menu2 =JOptionPane.showOptionDialog(null, "Clique na opção desejada", 
-                "Loja de Celular",0, JOptionPane.PLAIN_MESSAGE, null ,
-                new Object[]{"Cadastro de Funcionários","Cadastro de Clientes",
-                    "Sair"},"Sair");
-        if (menu2 == 0){
-            apresentaMenuCadastro();
-        }else if(menu2 == 1){
-            
-        }else if(menu2 ==2){
-            apresentaMenu();
-    }
-               
-    }
-    
-}
+}   
    

@@ -9,11 +9,11 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Alunos
+ * @author Marcio Pedro Schiehl And Ricardo Borba
  */
 public class CadastroCliente {
 
-        
+     
     int atual =0;
     
     String nomes [] = new String [100];
@@ -27,6 +27,7 @@ public class CadastroCliente {
     String places [] = new String [100]; // lougradouros
     String numbers [] = new String[100]; //numeros
     String addOns  [] = new String [100];// complementos
+   
     
     public void solicitaInformacaoCliente(int posicao) {
        nomes[posicao] = JOptionPane.showInputDialog(null,
@@ -51,6 +52,23 @@ public class CadastroCliente {
                 "Informe o Numero","Loja de Celular",JOptionPane.QUESTION_MESSAGE);
        addOns[posicao]= JOptionPane.showInputDialog(null,
                 "Complementos","Loja de Celular",JOptionPane.QUESTION_MESSAGE);
+    }        
+    public void apresentaMenuCadastro(){
+        int menu2 =JOptionPane.showOptionDialog(null, "Clique na opção desejada", 
+                "Loja de Celular",0, JOptionPane.PLAIN_MESSAGE, null ,
+                new Object[]{"Funcionários","Clientes","Buscar",
+                    "Sair"},"Sair");
+        if (menu2 == 0){
+            
+        }else if(menu2 == 1){
+            cadastrar();
+            
+        }else if(menu2 ==2){
+           
+        }else if(menu2 ==3){
+           
+        }
+       
     }
     public void cadastrar(){
             solicitaInformacaoCliente(atual);

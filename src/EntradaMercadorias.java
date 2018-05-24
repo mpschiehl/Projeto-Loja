@@ -1,10 +1,10 @@
 import javax.swing.JOptionPane;
 /**
  *
- * @author Ricardo Borba
+ * @author Ricardo Borba and Márcio Pedro Schiehl
  */
  public class EntradaMercadorias {
-    
+   
     
     String marca [] = new String [100];
     String modelo[] = new  String [100];
@@ -46,6 +46,20 @@ import javax.swing.JOptionPane;
         sistemaOp[posicao] = JOptionPane.showInputDialog("Digite a Sistema Operacional");
         acessorios[posicao] = JOptionPane.showInputDialog("Digite o acessório");
         }
-
-    }            
+    
+        public void apresentaMenuCadastroMercadorias(){
+        int menu3 =JOptionPane.showOptionDialog(null, "Clique na opção desejada", 
+                "Loja de Celular",0, JOptionPane.PLAIN_MESSAGE, null ,
+                new Object[]{"Cadastrar","Buscar","Sair"},"Sair");
+        if (menu3 == 0){
+            mercadoria();
+          
+        }else if(menu3 == 1){
+           buscarPelaMarca();
+         
+        }else if(menu3 ==2){
+           
+        }
+        }    
+    }
 
