@@ -59,7 +59,7 @@ public class CadastroCliente {
         } else if (menu2 == 1) {
             editar();
         } else if (menu2 == 2) {
-            buscar();
+            buscarNomeCliente();
         } else if (menu2 == 3) {
 
         }
@@ -97,7 +97,6 @@ public class CadastroCliente {
     private void editar() {
     }
 
-    private void buscar() {
-    }
+    
 
 }

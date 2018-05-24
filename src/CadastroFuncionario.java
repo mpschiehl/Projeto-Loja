@@ -45,6 +45,9 @@ public class CadastroFuncionario {
         addOns[posicao] = JOptionPane.showInputDialog(null,
                 "Complementos", "Loja de Celular", JOptionPane.QUESTION_MESSAGE);
     }
+    public void editar(){
+        
+    }
 
     public void cadastrarFuncionario() {
         solicitaInformacaoFuncionario(atual);
@@ -73,6 +76,21 @@ public class CadastroFuncionario {
                 + "\n" + places[posicao] + "   Numero: " + numbers[posicao]
                 + "\nComplementos: " + addOns[posicao], "Loja de Celular",
                 JOptionPane.PLAIN_MESSAGE);
+
+    }
+    public void apresentaMenuCadastro() {
+        int menu2 = JOptionPane.showOptionDialog(null, "Clique na opção desejada",
+                "Loja de Celular", 0, JOptionPane.PLAIN_MESSAGE, null,
+                new Object[]{"Cadastro", "Editar", "Buscar", "Sair"}, "Sair");
+        if (menu2 == 0) {
+            cadastrarFuncionario();
+        } else if (menu2 == 1) {
+            editar();
+        } else if (menu2 == 2) {
+            buscarNomeFuncionario();
+        } else if (menu2 == 3) {
+
+        }
 
     }
 }

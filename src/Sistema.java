@@ -14,11 +14,12 @@ public class Sistema {
 
     CadastroCliente cadastroCliente = new CadastroCliente();
     EntradaMercadorias entradaMercadorias = new EntradaMercadorias();
+    CadastroFuncionario cadastroFuncionario = new CadastroFuncionario();
 
     public void apresentaMenu() {
         int menu = JOptionPane.showOptionDialog(null, "Clique na opção desejada",
                 "Loja de Celular", 0, JOptionPane.PLAIN_MESSAGE, null,
-                new Object[]{"Cliente", "Mercadorias", "Vendas",
+                new Object[]{"Cliente", "Mercadorias", "Funcionario",
                     "Sair"}, "Sair");
         while (menu != 3) {
             switch (menu) {
@@ -29,8 +30,8 @@ public class Sistema {
                     entradaMercadorias.apresentaMenuCadastroMercadorias();
                     break;
                 case 2:
-                    JOptionPane.showMessageDialog(null,
-                            "Em Construção", "loja de Celular", JOptionPane.PLAIN_MESSAGE);
+                    cadastroFuncionario.apresentaMenuCadastro();
+                      
                     break;
             }
             menu = JOptionPane.showOptionDialog(null, "Clique na opção desejada",
