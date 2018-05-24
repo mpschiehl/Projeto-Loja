@@ -50,5 +50,28 @@ public class CadastroFuncionario {
             solicitaInformacaoFuncionario(atual);
             atual++;
     }
-}       
+       
+    public void buscarNomeFuncionario(){
+        String busca = JOptionPane.showInputDialog("Digite o nome parcial para a busca");
 
+        for (int i = 0; i < atual; i++) {
+            if (nomes[i].contains(busca)) {
+                apresentarInformacao(i);
+                }
+            }
+        
+    }
+    public void apresentarInformacao(int posicao){
+        JOptionPane.showMessageDialog(null, "Nome: " + nomes[posicao] +
+                "\nData de Nascimento: " + dataNascimentos[posicao] +
+                "\nTelefone: " + telephones[posicao] +
+                "\nCelular: " + mobilephones[posicao]+
+                "\nUnidade Federativa: " + ufs[posicao] + 
+                "\nCidade: " + cities[posicao] +
+                "\nBairro: " + neighborhoods[posicao] +
+                "\n" + places[posicao] + "   Numero: " + numbers[posicao]+
+                "\nComplementos: " + addOns[posicao],"Loja de Celular",
+                JOptionPane.PLAIN_MESSAGE);
+        
+    }
+}
