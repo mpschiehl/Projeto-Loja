@@ -20,13 +20,13 @@ public class CadastroFuncionario {
     String addOns  [] = new String [100];// complementos
    
     
-    public void solicitaInformacaoCliente(int posicao) {
+    public void solicitaInformacaoFuncionario(int posicao) {
        nomes[posicao] = JOptionPane.showInputDialog(null,
-                "Informe o nome","Loja de Celular",JOptionPane.QUESTION_MESSAGE);
+                "Informe o nome do colaborador","Loja de Celular",JOptionPane.QUESTION_MESSAGE);
        dataNascimentos[posicao] = JOptionPane.showInputDialog(null,
                 "Informe a data de Nascimento","Loja de Celular",JOptionPane.QUESTION_MESSAGE);
        cpfs[posicao] = JOptionPane.showInputDialog(null,
-                "Informe seu CPF/CNPJ","Loja de Celular",JOptionPane.QUESTION_MESSAGE);
+                "Informe seu CPF","Loja de Celular",JOptionPane.QUESTION_MESSAGE);
        telephones[posicao] = JOptionPane.showInputDialog(null,
                 "Informe o Telefone de Contatos","Loja de Celular",JOptionPane.QUESTION_MESSAGE);
        mobilephones[posicao] = JOptionPane.showInputDialog(null,
@@ -47,7 +47,7 @@ public class CadastroFuncionario {
 
     
     public void cadastrarFuncionario(){
-            solicitaInformacaoCliente(atual);
+            solicitaInformacaoFuncionario(atual);
             atual++;
     }
 }       

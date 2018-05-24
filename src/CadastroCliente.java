@@ -13,7 +13,8 @@ import javax.swing.JOptionPane;
  */
 public class CadastroCliente {
 
-     
+    CadastroFuncionario cadastro = new CadastroFuncionario();
+    
     int atual =0;
     
     String nomes [] = new String [100];
@@ -59,12 +60,12 @@ public class CadastroCliente {
                 new Object[]{"Funcionários","Clientes","Buscar",
                     "Sair"},"Sair");
         if (menu2 == 0){
-            
+            cadastro.cadastrarFuncionario();
         }else if(menu2 == 1){
             cadastrar();
             
         }else if(menu2 ==2){
-           
+           JOptionPane.showMessageDialog(null, "Em Contrução");
         }else if(menu2 ==3){
            
         }
@@ -74,5 +75,18 @@ public class CadastroCliente {
             solicitaInformacaoCliente(atual);
             atual++;
 }
+    public void buscarNomeCliente(){
+        String busca = JOptionPane.showInputDialog("Digite o nome parcial para a busca");
+
+        for (int i = 0; i < atual; i++) {
+            if (nomes[i].contains(busca)) {
+                apresentarInformacao(i);
+                }
+            }
+        
+    }
+    public void apresentarInformacao(int posicao){
+        
+    }
        
 }
