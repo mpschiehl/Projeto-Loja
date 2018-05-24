@@ -21,7 +21,7 @@ public class Sistema {
                 "Loja de Celular",0, JOptionPane.PLAIN_MESSAGE, null ,
                 new Object[]{"Cadastro","Mercadorias","Vendas",
                     "Sair"},"Sair");
-        while (menu != 4){
+        while (menu != 3){
             switch (menu){
                 case 0:
                     tela2.apresentaMenuCadastro();
@@ -35,12 +35,10 @@ public class Sistema {
                             ,JOptionPane.PLAIN_MESSAGE);
                     break;
                 case 3:
-                    menu = 4;
-                    break;
-                    default:
-                        JOptionPane.showMessageDialog(null,
-                            "Obrigado por utilizar o sistema.", "loja de Celular"
-                            ,JOptionPane.PLAIN_MESSAGE);
+                    JOptionPane.showMessageDialog(null,
+                            "Obrigado por escolher o sistema",
+                            "Loja de Celular",JOptionPane.INFORMATION_MESSAGE);
+                break;    
                     
                     
             }
@@ -48,8 +46,10 @@ public class Sistema {
                 "Loja de Celular",0, JOptionPane.PLAIN_MESSAGE, null ,
                 new Object[]{"Cadastro","Mercadorias","Vendas",
                     "Sair"},"Sair");
+           
+            }
         }
 
     }
-}   
+   
    
