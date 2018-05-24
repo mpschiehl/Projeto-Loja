@@ -1,32 +1,17 @@
-# Compiled class file
-*.class
 
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-nbproject/project.xml
-nbproject/private/private.properties
-nbproject/genfiles.properties
+.gitattributes
 nbproject/build-impl.xml
 manifest.mf
-build.xml
+nbproject/genfiles.properties
+nbproject/private/private.properties
+nbproject/private/private.xml
+nbproject/project.xml
 nbproject/project.properties
-/build/
-/nbproject/private/
-
+build/classes/.netbeans_update_resources
+build/classes/.netbeans_automatic_build
+build.xml
+build/classes/CadastroFuncionario.class
+build/classes/EntradaMercadorias.class
+build/classes/CadastroCliente.class
+build/classes/Principal.class
+build/classes/Sistema.class
