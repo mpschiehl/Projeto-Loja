@@ -65,7 +65,7 @@ public class CadastroCliente {
             cadastrar();
             
         }else if(menu2 ==2){
-          buscar.apresentaMenuBusca();
+            buscar.apresentaMenuBusca();
         }else if(menu2 ==3){
            
         }

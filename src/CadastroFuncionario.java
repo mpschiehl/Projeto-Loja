@@ -56,12 +56,12 @@ public class CadastroFuncionario {
 
         for (int i = 0; i < atual; i++) {
             if (nomes[i].contains(busca)) {
-                apresentarInformacao(i);
+                apresentarInformacaoFuncionario(i);
                 }
             }
         
     }
-    public void apresentarInformacao(int posicao){
+    public void apresentarInformacaoFuncionario(int posicao){
         JOptionPane.showMessageDialog(null, "Nome: " + nomes[posicao] +
                 "\nData de Nascimento: " + dataNascimentos[posicao] +
                 "\nTelefone: " + telephones[posicao] +
