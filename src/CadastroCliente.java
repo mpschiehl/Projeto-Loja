@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author Marcio Pedro Schiehl And Ricardo Borba
  */
 public class CadastroCliente {
-
+    TelaBuscas buscar = new TelaBuscas();
     CadastroFuncionario cadastro = new CadastroFuncionario();
     
     int atual =0;
@@ -65,7 +65,7 @@ public class CadastroCliente {
             cadastrar();
             
         }else if(menu2 ==2){
-           JOptionPane.showMessageDialog(null, "Em Contrução");
+          buscar.apresentaMenuBusca();
         }else if(menu2 ==3){
            
         }
@@ -86,8 +86,15 @@ public class CadastroCliente {
         
     }
     public void apresentarInformacao(int posicao){
-        JOptionPane.showMessageDialog(null, " "
-                ,"Loja de Celular",JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Nome: " + nomes[posicao] +
+                "\nData de Nascimento: " + dataNascimentos[posicao] +
+                "\nCNPJ/CPF: " + cpfs[posicao] + "\nTelefone: " + 
+                telephones[posicao] + "\nCelular: " + mobilephones[posicao]+
+                "\nUnidade Federativa: " + ufs[posicao] + "\nCidade: " + 
+                cities[posicao] + "\nBairro: " + neighborhoods[posicao] +
+                "\n" + places[posicao] + "   Numero: " + numbers[posicao]+
+                "\nComplementos: " + addOns[posicao],"Loja de Celular",
+                JOptionPane.PLAIN_MESSAGE);
     }
        
 }
