@@ -9,41 +9,29 @@ public class Vendas {
 
     int maiorVendas = Integer.MIN_VALUE;
     int maiorCliente = Integer.MIN_VALUE;
-    int marcaMaiorPreco = Integer.MIN_VALUE;
-
+    String[] marcas = new String [100];
     String nomesFuncionario[] = new String[100];
     String nomesCliente[] = new String[100];
     String marcaMaiorPreco[] = new String[100];
     int atual = 0;
 
     public void solicitarInformacao(int posicao) {
-        nomeFuncionario[posicao] = JOptionPane.showInputDialog("Digite a Funcionario");
-        nomeCliente[posicao] = JOptionPane.showInputDialog("Digite a Cliente");
-        marca[posicao] = JOptionPane.showInputDialog("Digite produto vendido")
-    
-    
-    );
+        nomesFuncionario[posicao] = JOptionPane.showInputDialog("Digite a Funcionario");
+        nomesCliente[posicao] = JOptionPane.showInputDialog("Digite a Cliente");
+        marcas[posicao] = JOptionPane.showInputDialog("Digite produto vendido");
     }
 
-    if(nomeFuncionario > maiorVendas
-
-    
-        ){
-            maiorVendas = nomeFuncionario;
+    for(int i=0;i<atual;i++){
+        if(nomesFuncionario[i] > maiorVendas[i]){
+                maiorVendas[i] = nomesFuncionario[i];
+        }
+        if(nomesCliente[i] > maiorCliente[i]){
+                maiorCliente[i] = nomesCliente[i];
+        }
+        if(marcas[i] > marcaMaiorPreco[i]){
+                marcaMaiorPreco[i] = marcas[i];
     }
-    if(nomeCliente > maiorCliente
-
-    
-        ){
-            maiorCliente = nomeCliente;
-    }
-    if(marca > marcaMaiorPreco
-
-    
-        ){
-            marcaMaiorPreco = marca;
-    }
-
+}
     public void apresentarVendas(int posicao) {
         JOptionPane.showInputDialog(null,
                 "Funcionario do MÊS: " + maiorVendas
