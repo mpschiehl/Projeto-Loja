@@ -17,7 +17,7 @@ public class Sistema {
    EntradaMercadorias tela3 = new EntradaMercadorias();
    
     public void apresentaMenu(){
-        int menu =JOptionPane.showOptionDialog(null, "Clique na opção desejada", 
+        int menu = JOptionPane.showOptionDialog(null, "Clique na opção desejada", 
                 "Loja de Celular",0, JOptionPane.PLAIN_MESSAGE, null ,
                 new Object[]{"Cadastro","Mercadorias","Vendas",
                     "Sair"},"Sair");
@@ -33,6 +33,9 @@ public class Sistema {
                     JOptionPane.showMessageDialog(null,
                             "Em Construção", "loja de Celular"
                             ,JOptionPane.PLAIN_MESSAGE);
+                    break;
+                case 3:
+                    menu = 4;
                     break;
                     default:
                         JOptionPane.showMessageDialog(null,
