@@ -63,5 +63,12 @@ public class EntradaMercadorias {
     }
 
     private void editar() {
+        String buscar = JOptionPane.showInputDialog("Digite o nome para editar");
+        for (int i = 0; i<atual;i++){
+            if (marca[i].equals(buscar)){
+                solicitarInformacao(i);
+                return;
+            }
+        }    
     }
 }

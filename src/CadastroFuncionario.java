@@ -46,7 +46,13 @@ public class CadastroFuncionario {
                 "Complementos", "Loja de Celular", JOptionPane.QUESTION_MESSAGE);
     }
     public void editar(){
-        
+       String buscar = JOptionPane.showInputDialog("Digite o nome para editar");
+        for (int i = 0; i<atual;i++){
+            if (nomes[i].equals(buscar)){
+                solicitaInformacaoFuncionario(i);
+                return;
+            }
+        }
     }
 
     public void cadastrarFuncionario() {

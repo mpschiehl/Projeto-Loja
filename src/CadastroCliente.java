@@ -95,6 +95,13 @@ public class CadastroCliente {
     }
 
     private void editar() {
+        String buscar = JOptionPane.showInputDialog("Digite o nome para editar");
+        for (int i = 0; i<atual;i++){
+            if (nomes[i].equals(buscar)){
+                solicitaInformacaoCliente(i);
+                return;
+            }
+        }
     }
 
     

@@ -35,9 +35,9 @@ public class Sistema {
                     break;
             }
             menu = JOptionPane.showOptionDialog(null, "Clique na opção desejada",
-                    "Loja de Celular", 0, JOptionPane.PLAIN_MESSAGE, null,
-                    new Object[]{"Cadastro", "Mercadorias", "Vendas",
-                        "Sair"}, "Sair");
+                "Loja de Celular", 0, JOptionPane.PLAIN_MESSAGE, null,
+                new Object[]{"Cliente", "Mercadorias", "Funcionario",
+                    "Sair"}, "Sair");
         }
         JOptionPane.showMessageDialog(null,
                 "Obrigado por escolher o sistema",
