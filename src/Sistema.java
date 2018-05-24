@@ -1,3 +1,4 @@
+
 import javax.swing.JOptionPane;
 
 /*
@@ -5,50 +6,41 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Marcio Pedro Schiehl and Ricardo Borba
  */
 public class Sistema {
-  
-   CadastroCliente tela2 = new CadastroCliente();
-   EntradaMercadorias tela3 = new EntradaMercadorias();
-   
-    public void apresentaMenu(){
-        int menu = JOptionPane.showOptionDialog(null, "Clique na opção desejada", 
-                "Loja de Celular",0, JOptionPane.PLAIN_MESSAGE, null ,
-                new Object[]{"Cadastro","Mercadorias","Vendas",
-                    "Sair"},"Sair");
-        while (menu != 3){
-            switch (menu){
+
+    CadastroCliente cadastroCliente = new CadastroCliente();
+    EntradaMercadorias entradaMercadorias = new EntradaMercadorias();
+
+    public void apresentaMenu() {
+        int menu = JOptionPane.showOptionDialog(null, "Clique na opção desejada",
+                "Loja de Celular", 0, JOptionPane.PLAIN_MESSAGE, null,
+                new Object[]{"Cliente", "Mercadorias", "Vendas",
+                    "Sair"}, "Sair");
+        while (menu != 3) {
+            switch (menu) {
                 case 0:
-                    tela2.apresentaMenuCadastro();
-                            break;
+                    cadastroCliente.apresentaMenuCadastro();
+                    break;
                 case 1:
-                    tela3.apresentaMenuCadastroMercadorias();
+                    entradaMercadorias.apresentaMenuCadastroMercadorias();
                     break;
                 case 2:
                     JOptionPane.showMessageDialog(null,
-                            "Em Construção", "loja de Celular"
-                            ,JOptionPane.PLAIN_MESSAGE);
+                            "Em Construção", "loja de Celular", JOptionPane.PLAIN_MESSAGE);
                     break;
-                case 3:
-                    JOptionPane.showMessageDialog(null,
-                            "Obrigado por escolher o sistema",
-                            "Loja de Celular",JOptionPane.INFORMATION_MESSAGE);
-                break;    
-                    
-                    
             }
-            menu =JOptionPane.showOptionDialog(null, "Clique na opção desejada", 
-                "Loja de Celular",0, JOptionPane.PLAIN_MESSAGE, null ,
-                new Object[]{"Cadastro","Mercadorias","Vendas",
-                    "Sair"},"Sair");
-           
-            }
+            menu = JOptionPane.showOptionDialog(null, "Clique na opção desejada",
+                    "Loja de Celular", 0, JOptionPane.PLAIN_MESSAGE, null,
+                    new Object[]{"Cadastro", "Mercadorias", "Vendas",
+                        "Sair"}, "Sair");
         }
-
+        JOptionPane.showMessageDialog(null,
+                "Obrigado por escolher o sistema",
+                "Loja de Celular", JOptionPane.INFORMATION_MESSAGE);
     }
-   
-   
+
+}
