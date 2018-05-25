@@ -16,7 +16,7 @@ public class Vendas {
     public void solicitarInformacao(int posicao) {
         nomeFuncionario[posicao] = JOptionPane.showInputDialog("Digite a Funcionario");
         numVendas[posicao] = Integer.parseInt(JOptionPane.showInputDialog("Digite quantidade vendida"));
-        nomeCliente[posicao] = JOptionPane.showInputDialog("Digite 0 Cliente");
+        nomeCliente[posicao] = JOptionPane.showInputDialog("Digite Nome Cliente");
         nomeCelular[posicao] = JOptionPane.showInputDialog("Digite produto vendido");
     }
     public void cadastrarVenda(){
