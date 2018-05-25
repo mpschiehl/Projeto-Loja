@@ -72,7 +72,17 @@ public class CadastroFuncionario {
         }
 
     }
-
+    public void funcionarioMaiorNome(){
+        int tam = 0;
+        String maiorNome = "";
+        for (int i=0; i<atual; i++) {
+            if(tam < nomes[i].length()){
+                maiorNome = nomes[i];
+            }
+        }
+            JOptionPane.showMessageDialog(null, "Maior nome é: " + maiorNome);
+    }
+     
     public void apresentarInformacaoFuncionario(int posicao) {
         JOptionPane.showMessageDialog(null, "Nome: " + nomes[posicao]
                 + "\nData de Nascimento: " + dataNascimentos[posicao]
@@ -89,14 +99,16 @@ public class CadastroFuncionario {
     public void apresentaMenuCadastro() {
         int menu2 = JOptionPane.showOptionDialog(null, "Clique na opção desejada",
                 "Loja de Celular", 0, JOptionPane.PLAIN_MESSAGE, null,
-                new Object[]{"Cadastro", "Editar", "Buscar", "Sair"}, "Sair");
+                new Object[]{"Cadastro","Funcionario Maior nome", "Editar", "Buscar", "Sair"}, "Sair");
         if (menu2 == 0) {
             cadastrarFuncionario();
-        } else if (menu2 == 1) {
+        }else if (menu2 == 1) {
+            funcionarioMaiorNome();
+        }else if (menu2 == 2) {
             editar();
-        } else if (menu2 == 2) {
+        }else if (menu2 == 3) {
             buscarNomeFuncionario();
-        } else if (menu2 == 3) {
+        }else if (menu2 == 4) {
 
         }
 
