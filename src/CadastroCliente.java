@@ -24,13 +24,15 @@ public class CadastroCliente {
     String places[] = new String[100]; // lougradouros
     String numbers[] = new String[100]; //numeros
     String addOns[] = new String[100];// complementos
+    String maiorIdade = "",nomeCliente = "";
+    int ano=0,idade =0,anoatual = 2018;
 
     public void solicitaInformacaoCliente(int posicao) {
         nomes[posicao] = JOptionPane.showInputDialog(null,
                 "Informe o nome", "Loja de Celular", JOptionPane.QUESTION_MESSAGE);
         dataNascimentos[posicao] = JOptionPane.showInputDialog(null,
                 "Informe a data de Nascimento", "Loja de Celular", JOptionPane
-                .QUESTION_MESSAGE).replace(".", "").replace("-", "").replace("\\","").replace(",", "").replace("/", "");
+                .QUESTION_MESSAGE).trim().replace(".", "").replace("-", "").replace("\\","").replace(",", "").replace("/", "");
         cpfs[posicao] = JOptionPane.showInputDialog(null,
                 "Informe seu CPF/CNPJ", "Loja de Celular", JOptionPane.QUESTION_MESSAGE)
                 .replace(".", "").replace("-", "").replace("\\","").replace(",", "").replace("/", "");
@@ -52,12 +54,25 @@ public class CadastroCliente {
                 "Informe o Numero", "Loja de Celular", JOptionPane.QUESTION_MESSAGE);
         addOns[posicao] = JOptionPane.showInputDialog(null,
                 "Complementos", "Loja de Celular", JOptionPane.QUESTION_MESSAGE);
+        
+    }
+    public void clienteMaisVelho(){
+        for(int i = 0; i<atual; i++){
+           maiorIdade = dataNascimentos[i].substring(4,8);
+           ano = Integer.parseInt(maiorIdade);
+           idade = anoatual - ano;
+          /* if(ano <()){
+               
+           }*/
+            
+            
+        }JOptionPane.showMessageDialog(null, ano);
     }
 
     public void apresentaMenuCadastro() {
         int menu2 = JOptionPane.showOptionDialog(null, "Clique na opção desejada",
                 "Loja de Celular", 0, JOptionPane.PLAIN_MESSAGE, null,
-                new Object[]{"Cadastro", "Editar", "Buscar", "Sair"}, "Sair");
+                new Object[]{"Cadastro", "Editar", "Buscar","Cliente mais velho" ,"Sair"}, "Sair");
         if (menu2 == 0) {
             cadastrar();
         } else if (menu2 == 1) {
@@ -65,9 +80,10 @@ public class CadastroCliente {
         } else if (menu2 == 2) {
             buscarNomeCliente();
         } else if (menu2 == 3) {
-
+            clienteMaisVelho();
+        }else if (menu2 == 4) {
+            
         }
-
     }
 
     public void cadastrar() {
