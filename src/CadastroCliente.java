@@ -29,13 +29,17 @@ public class CadastroCliente {
         nomes[posicao] = JOptionPane.showInputDialog(null,
                 "Informe o nome", "Loja de Celular", JOptionPane.QUESTION_MESSAGE);
         dataNascimentos[posicao] = JOptionPane.showInputDialog(null,
-                "Informe a data de Nascimento", "Loja de Celular", JOptionPane.QUESTION_MESSAGE);
+                "Informe a data de Nascimento", "Loja de Celular", JOptionPane
+                .QUESTION_MESSAGE).replace(".", "").replace("-", "").replace("\\","").replace(",", "").replace("/", "");
         cpfs[posicao] = JOptionPane.showInputDialog(null,
-                "Informe seu CPF/CNPJ", "Loja de Celular", JOptionPane.QUESTION_MESSAGE);
+                "Informe seu CPF/CNPJ", "Loja de Celular", JOptionPane.QUESTION_MESSAGE)
+                .replace(".", "").replace("-", "").replace("\\","").replace(",", "").replace("/", "");
         telephones[posicao] = JOptionPane.showInputDialog(null,
-                "Informe o Telefone de Contatos", "Loja de Celular", JOptionPane.QUESTION_MESSAGE);
+                "Informe o Telefone de Contatos", "Loja de Celular", JOptionPane
+                .QUESTION_MESSAGE).replace(".", "").replace("-", "").replace("\\","").replace(",", "").replace("/", "");
         mobilephones[posicao] = JOptionPane.showInputDialog(null,
-                "Informe o Celular", "Loja de Celular", JOptionPane.QUESTION_MESSAGE);
+                "Informe o Celular", "Loja de Celular", JOptionPane
+                .QUESTION_MESSAGE).replace(".", "").replace("-", "").replace("\\","").replace(",", "").replace("/", "");
         ufs[posicao] = JOptionPane.showInputDialog(null,
                 "Informe a Unidade Federativa (Estado)", "Loja de Celular", JOptionPane.QUESTION_MESSAGE);
         cities[posicao] = JOptionPane.showInputDialog(null,
@@ -103,7 +107,9 @@ public class CadastroCliente {
             }
         }
     }
-
+    private void dados(){
+    
+    }
     
 
 }

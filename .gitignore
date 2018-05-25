@@ -15,3 +15,10 @@ build/classes/EntradaMercadorias.class
 build/classes/CadastroCliente.class
 build/classes/Principal.class
 build/classes/Sistema.class
+/src/nbproject/private/
+/nbproject/private/
+src/nbproject/project.properties
+build/classes/Vendas.class
+*.class
+*.class
+*.class
