@@ -1,6 +1,4 @@
-
 import javax.swing.JOptionPane;
-
 /**
  *
  * @author Ricardo Borba and Márcio Pedro Schiehl

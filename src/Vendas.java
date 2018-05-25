@@ -1,8 +1,7 @@
 import javax.swing.JOptionPane;
-
 /**
  *
- * @author Rciardo Borba & Marcio Pedro Schiehl
+ * @author Ricardo Borba & Marcio Pedro Schiehl
  */
 public class Vendas {
     
