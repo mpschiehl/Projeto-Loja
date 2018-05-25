@@ -6,8 +6,6 @@ import javax.swing.JOptionPane;
  */
 public class Vendas {
     
-    
-
     int[] numVendas = new int[100]; 
     String[] nomeCelular = new String [100];
     String[] nomeFuncionario= new String[100];
@@ -21,27 +19,46 @@ public class Vendas {
         nomeCliente[posicao] = JOptionPane.showInputDialog("Digite 0 Cliente");
         nomeCelular[posicao] = JOptionPane.showInputDialog("Digite produto vendido");
     }
-    public void cadastrar(){
+    public void cadastrarVenda(){
         solicitarInformacao(atual);
         atual++;
     }
-    public void decobrirAMaiorVenda(){
+    public void decobrirMaiorVenda(){
         int maiorVendas = Integer.MIN_VALUE;
         String nomeFuncionarMaiorVenda = "";
-        int valorVendas = 0;
         String maiorNomeCliente = "";
-        String nomeMaiorCelular = "0";
+        String nomeMaiorCelular = "";
+        
+        if(atual == 0){
+            JOptionPane.showMessageDialog(null,"Nada cadastrado");
+            return;
+        }
         for(int i = 0; i < atual; i++){
-            if(maiorVendas > numVendas[i]){
+            if(maiorVendas < numVendas[i]){
+                maiorVendas = numVendas[i];
                 nomeFuncionarMaiorVenda = nomeFuncionario[i];
                 maiorNomeCliente = nomeCliente[i];
                 nomeMaiorCelular = nomeCelular [i];
             }
         }
+        
         JOptionPane.showInputDialog(null,
-                "Funcionario do MÊS: " + nomeFuncionarMaiorVenda
-                + "\nQuantidade: " + maiorVendas
+                "Funcionario maior venda: " + nomeFuncionarMaiorVenda
+                + "\nQuantidades: " + maiorVendas
                 + "\nNome Cliente: " + maiorNomeCliente
-                + "\nCelular Maior Preço: " + nomeMaiorCelular);
+                + "\nProduto Vendido: " + nomeMaiorCelular);
+    }
+
+        public void apresentaMenuVendas() {
+        int opcaoEscolhida = JOptionPane.showOptionDialog(null, "Clique na opção desejada",
+                "Loja de Celular", 0, JOptionPane.PLAIN_MESSAGE, null,
+                new Object[]{"Cadastrar Venda", "Maior Vendas", "Sair"}, "Sair");
+        if (opcaoEscolhida == 0) {
+            cadastrarVenda();
+        } else if (opcaoEscolhida == 1) {
+            decobrirMaiorVenda();
+        } else if (opcaoEscolhida == 2) {
+            
+        }
     }
 }
