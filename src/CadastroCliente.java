@@ -25,7 +25,8 @@ public class CadastroCliente {
     String numbers[] = new String[100]; //numeros
     String addOns[] = new String[100];// complementos
     String maiorIdade = "",nomeCliente = "";
-    int ano=0,idade =0,anoatual = 2018;
+    int ano=0,anoatual = 2018;
+    int  idades [] = new int [100];
 
     public void solicitaInformacaoCliente(int posicao) {
         nomes[posicao] = JOptionPane.showInputDialog(null,
@@ -57,16 +58,20 @@ public class CadastroCliente {
         
     }
     public void clienteMaisVelho(){
+        int pk = 0;
         for(int i = 0; i<atual; i++){
+            pk = i -1;
            maiorIdade = dataNascimentos[i].substring(4,8);
            ano = Integer.parseInt(maiorIdade);
-           idade = anoatual - ano;
-          /* if(ano <()){
-               
-           }*/
+           idades[i] = anoatual - ano;
+           if(i == 0){
+             nomeCliente = nomes[i];  
+           }else if(idades[i]> idades[pk]){
+               nomeCliente = nomes[i];
+           }
             
             
-        }JOptionPane.showMessageDialog(null, ano);
+        }JOptionPane.showMessageDialog(null, nomeCliente);
     }
 
     public void apresentaMenuCadastro() {
